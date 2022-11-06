@@ -21,7 +21,13 @@ class ViewController: UIViewController {
         )
     }
 
-
+    @IBAction func goToWebsite(_ sender: Any) {
+        let urlDicoding = "https://www.dicoding.com"
+        if let url = URL(string: urlDicoding), UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.open(url)
+        }
+    }
+    
 }
 
 extension ViewController: UITableViewDataSource {
